@@ -1,6 +1,14 @@
 # Pivot
 Offline Android Studio app for linear independence and matrix rank. Open this directory in Android Studio and sync Gradle. Java 17 and Android SDK 35 are required.
 
+## See Pivot in action
+
+[![Watch the Pivot app walkthrough](docs/demo/pivot-preview.gif)](docs/demo/pivot-showcase.mp4)
+
+**[Watch or download the full walkthrough (MP4, 54 seconds)](https://github.com/kraemonie/pivot/raw/refs/heads/main/docs/demo/pivot-showcase.mp4)** · [Download the Android APK](https://github.com/kraemonie/pivot/releases/latest)
+
+Actual Android emulator footage with captions: matrix sizing, rank and independence, row operations, practice feedback, and the learning guide. The animated preview is an excerpt; the full video is silent.
+
 ## Use
 Solve: select 1-5 rows and columns, enter numbers or fractions, and calculate. Each column is one vector. Results include exact rank, determinant for square matrices, pivot columns and a nontrivial dependence relation. Step through row reduction.
 Practice: answer rank and independence questions with immediate explanations. Scores persist locally. Learn: concise reference based on the supplied course PDF pages 1-3.
