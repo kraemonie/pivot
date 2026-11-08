@@ -10,3 +10,12 @@
 
 ## 0.1.1
 Vector arrows replace Unicode arrow glyphs. Added native first-launch welcome state. Android 9 emulator: welcome display, completion, reload persistence, calculator, quiz and responsive-layout checks passed. Build and lint passed; final scroll-focus adjustment rebuilt.
+
+## 0.1.2
+- Android debug build, Android test build and lint passed.
+- Native OCR instrumentation test passed on Android 9: rendered 2x2 bitmap recognized as rows 1 2 / 3 4.
+- Eleven numerical/parser test groups passed.
+- Emulator checks passed: custom dimension pickers, all 36 quiz entries/categories, scan review validation and computation, minimum 12px visible text, calm input focus, layouts at 320/360/412px.
+- Directional step classes verified; external camera launched and cancellation restored scan controls.
+- Manifest inspected: no Internet or Camera permission requested by Pivot. System camera app handles capture.
+- Camera recognition of real paper/handwriting varies and awaits user phone feedback. OCR confirmation is required.
