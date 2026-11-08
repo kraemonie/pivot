@@ -1,0 +1,10 @@
+plugins { id 'com.android.application' }
+android {
+ namespace 'dev.pivot.matrix'
+ compileSdk 35
+ buildFeatures { buildConfig true }
+ defaultConfig { applicationId 'dev.pivot.matrix'; minSdk 26; targetSdk 35; versionCode 1; versionName '0.1.0' }
+ sourceSets { main { assets.srcDirs=[rootProject.file('web')] } }
+ compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}
+dependencies { implementation 'androidx.webkit:webkit:1.12.1' }
