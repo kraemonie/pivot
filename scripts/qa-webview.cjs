@@ -4,6 +4,15 @@ async function send(method,params){const n=++id,p=new Promise(r=>pending.set(n,r
 async function run(expression){const r=await send('Runtime.evaluate',{expression,returnByValue:true});if(r.exceptionDetails)throw Error(JSON.stringify(r.exceptionDetails));return r.result.value;}
 try{
 assert.equal(await run("!!window.PivotMath"),true);
+if(await run("window.PivotBridge&&PivotBridge.needsWelcome()")){
+assert.equal(await run("document.getElementById('welcome').hidden"),false);assert(await run("document.getElementById('welcome').getBoundingClientRect().height>100"));
+await run("document.getElementById('beginPivot').click()");
+assert.equal(await run("PivotBridge.needsWelcome()"),false);
+await send('Page.reload',{});
+for(let i=0;i<40;i++){await new Promise(r=>setTimeout(r,100));if(await run("!!document.getElementById('welcome')"))break;}
+assert.equal(await run("document.getElementById('welcome').hidden"),true);
+console.log('PASS: first-launch welcome, completion and reload persistence');
+}
 await run("document.getElementById('calculate').click()");assert.equal(await run("document.getElementById('rank').textContent"),'3');assert.equal(await run("document.getElementById('determinant').textContent"),'-24');
 await run("document.querySelector('[data-example=\"1\"]').click();document.getElementById('calculate').click()");assert.equal(await run("document.getElementById('verdict').textContent"),'Linearly dependent.');
 await run("document.getElementById('nextStep').click()");assert.notEqual(await run("document.getElementById('stepProgress').textContent"),'1 / 1');

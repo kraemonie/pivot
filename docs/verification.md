@@ -7,3 +7,6 @@
 - Emulator crash buffer was empty. Visual inspection performed on the Solve screen.
 - All bundled APK assets match the final source.
 - Calculations use exact safe-integer fractions; oversized intermediate results are rejected. No symbolic algebra parser.
+
+## 0.1.1
+Vector arrows replace Unicode arrow glyphs. Added native first-launch welcome state. Android 9 emulator: welcome display, completion, reload persistence, calculator, quiz and responsive-layout checks passed. Build and lint passed; final scroll-focus adjustment rebuilt.

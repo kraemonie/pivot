@@ -18,8 +18,13 @@ public class MainActivity extends Activity {
  WebView.setWebContentsDebuggingEnabled(BuildConfig.DEBUG);
  WebViewAssetLoader assets=new WebViewAssetLoader.Builder().addPathHandler("/assets/",new WebViewAssetLoader.AssetsPathHandler(this)).build();
  web.setWebViewClient(new WebViewClient(){@Override public WebResourceResponse shouldInterceptRequest(WebView v,WebResourceRequest request){WebResourceResponse response=assets.shouldInterceptRequest(request.getUrl());return response!=null?response:new WebResourceResponse("text/plain","UTF-8",404,"Not found",null,new ByteArrayInputStream(new byte[0]));}@Override public boolean shouldOverrideUrlLoading(WebView v,WebResourceRequest request){return true;}});
+ web.addJavascriptInterface(new IntroBridge(),"PivotBridge");
  web.loadUrl("https://appassets.androidplatform.net/assets/index.html");
  if(Build.VERSION.SDK_INT>=33)getOnBackInvokedDispatcher().registerOnBackInvokedCallback(android.window.OnBackInvokedDispatcher.PRIORITY_DEFAULT,this::back);
+ }
+ public class IntroBridge {
+ @JavascriptInterface public boolean needsWelcome(){return !getSharedPreferences("intro",MODE_PRIVATE).getBoolean("completed",false);}
+ @JavascriptInterface public void completeWelcome(){getSharedPreferences("intro",MODE_PRIVATE).edit().putBoolean("completed",true).apply();}
  }
  private void back(){web.evaluateJavascript("window.pivotBack&&window.pivotBack()",result->{if(!"true".equals(result))finish();});}
  @Override public void onBackPressed(){back();}
