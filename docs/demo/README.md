@@ -1,6 +1,6 @@
 # Pivot showcase media
 
-- pivot-showcase.mp4: 54-second captioned walkthrough, H.264, 1280 × 800, 24 fps, silent.
+- pivot-showcase.mp4: 54-second captioned walkthrough, H.264, 1080 × 1920 (9:16 portrait), 24 fps, silent.
 - pivot-preview.gif: animated excerpt for the repository README.
 - pivot-showcase.jpg: still cover image.
 
