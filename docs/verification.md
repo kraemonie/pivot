@@ -19,3 +19,11 @@ Vector arrows replace Unicode arrow glyphs. Added native first-launch welcome st
 - Directional step classes verified; external camera launched and cancellation restored scan controls.
 - Manifest inspected: no Internet or Camera permission requested by Pivot. System camera app handles capture.
 - Camera recognition of real paper/handwriting varies and awaits user phone feedback. OCR confirmation is required.
+
+## 0.1.3
+- Android build, Android test build and lint passed.
+- Native tests: printed-matrix OCR and numeric-only row filtering passed (2 tests).
+- Eleven numerical/parser checks passed.
+- Emulator checks passed for operator alignment at 320/360/412px, vertically centered picker, Learn reveal on two separate visits, scan review, quiz and minimum 12px text.
+- New SVG matrix branding and gentle header floating motion; reduced motion remains supported.
+- Portrait showcase uses a new media path and explicitly sized 9:16 README preview.

@@ -30,3 +30,13 @@ header,main{position:relative;z-index:1;}@keyframes ambient-drift{from{backgroun
 .steps-card{overflow:hidden}.step-stage{min-width:0;max-width:100%;}.step-stage.step-next{animation:step-left .32s cubic-bezier(.2,.8,.2,1)}.step-stage.step-prev{animation:step-right .32s cubic-bezier(.2,.8,.2,1)}@keyframes step-left{from{opacity:.25;transform:translateX(24px)}to{opacity:1;transform:translateX(0)}}@keyframes step-right{from{opacity:.25;transform:translateX(-24px)}to{opacity:1;transform:translateX(0)}}
 
 .scan-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.scan-actions button{display:flex;align-items:center;gap:8px;font-size:13px}.scan-open{overflow:hidden}.scan-sheet{max-height:90vh;overflow:auto}.scan-sheet label{display:block;font-size:13px;font-weight:700;margin-bottom:8px}.scan-sheet textarea{width:100%;resize:vertical;min-height:150px;background:#FFF;border:1px solid #B7C8AB;color:#172238;border-radius:13px;padding:14px;font:16px/1.8 monospace;box-shadow:none}.scan-sheet textarea:focus{outline:none;border-color:#718B5E}.scan-sheet .primary{width:100%;margin-top:12px}
+
+/* Align the operator with the controls, independent of the labels. */
+.dimensions{display:grid;grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr) auto;align-items:end;gap:10px;}
+.dimensions>.dimension-field{min-width:0}.dimensions>.dimension-field .dimension-button{width:100%;min-width:0;}
+.dimensions>span{height:48px;display:flex;align-items:center;justify-content:center;align-self:end;font-size:20px;line-height:1;}
+.dimensions .quiet{height:48px;margin-left:0;}.dimension-overlay{align-items:center;}.dimension-options{justify-items:stretch;}.size-choice{text-align:center;}
+.hero .orbit{animation:header-float 5s ease-in-out infinite;}@keyframes header-float{0%,100%{transform:translateY(0) rotate(7deg)}50%{transform:translateY(-10px) rotate(2deg)}}
+@media(max-width:350px){.dimensions{gap:6px;grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr) auto;}.dimensions .quiet{padding-left:10px;padding-right:10px;}}
+
+.brand-icon{display:block;width:36px;height:36px;flex-shrink:0;color:#D5F875}.welcome-wordmark{display:flex;align-items:center;gap:10px;}

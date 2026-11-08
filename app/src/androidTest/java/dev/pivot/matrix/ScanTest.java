@@ -22,4 +22,11 @@ public class ScanTest {
   recognizer.process(InputImage.fromBitmap(bitmap,0)).addOnSuccessListener(text->{result[0]=CameraScanner.readRows(text);latch.countDown();}).addOnFailureListener(e->{error[0]=e.toString();latch.countDown();});
   assertTrue("OCR timed out",latch.await(60,TimeUnit.SECONDS));assertNull(error[0]);assertEquals("1 2\n3 4",result[0]);recognizer.close();bitmap.recycle();
  }
+ @Test public void testOnlyNumericMatrixRows(){
+  assertEquals("",CameraScanner.numericRow("Example 2"));
+  assertEquals("",CameraScanner.numericRow("The rank is 3"));
+  assertEquals("1 -2 3/4",CameraScanner.numericRow("A = [ 1 − 2 3/4 ]"));
+  assertEquals("0.25 -0.5",CameraScanner.numericRow("[ 0.25 -0.5 ]"));
+ }
+
 }

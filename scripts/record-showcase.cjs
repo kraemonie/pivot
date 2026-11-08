@@ -17,7 +17,7 @@ const fs=require('node:fs');
  await run("document.querySelector('[data-page=\"practice\"]').click()");scene('Build your confidence.','36 shuffled practice questions. Get an explanation after every answer.');await delay(1800);await run("document.querySelector('.quiz-card').scrollIntoView({behavior:'smooth',block:'start'})");await delay(2200);await run("document.querySelector('#answers button').click()");await delay(1600);await run("document.getElementById('feedback').scrollIntoView({behavior:'smooth',block:'center'})");await delay(2400);
  await run("document.querySelector('[data-page=\"learn\"]').click();document.querySelector('#learn .card').scrollIntoView({behavior:'smooth',block:'center'})");scene('Make the ideas click.','Independence, rank and pivots—explained in a pocket learning guide.');await delay(2600);
  await run("document.querySelectorAll('#learn .card')[1].scrollIntoView({behavior:'smooth',block:'center'})");await delay(2200);await run("document.querySelector('#learn .callout').scrollIntoView({behavior:'smooth',block:'center'})");await delay(2600);
- await run("document.querySelector('.brand').click()");scene('Your next move starts here.','Solve. Practice. Learn.\nPivot for Android · v0.1.2');await delay(5000);
+ await run("document.querySelector('.brand').click()");scene('Your next move starts here.','Solve. Practice. Learn.\nPivot for Android · v0.1.3');await delay(5000);
  fs.writeFileSync('artifacts/showcase/scenes.json',JSON.stringify({scenes,duration:(Date.now()-started)/1000},null,2));
  }finally{ws.close();}
 })().catch(e=>{console.error(e);process.exit(1)});

@@ -17,7 +17,7 @@ for row in range(2):
 d.text((190,38),'pivot',font=font(80),fill='#D5F875')
 d.text((82,145),'EVERY COLUMN COUNTS',font=font(25),fill='#AFCAA0')
 d.line((80,198,1000,198),fill='#314631',width=2)
-d.text((180,1855),'ACTUAL ANDROID APP · PIVOT v0.1.2',font=font(24),fill='#AFC3A7')
+d.text((180,1855),'ACTUAL ANDROID APP · PIVOT v0.1.3',font=font(24),fill='#AFC3A7')
 base.save(tmp/'backdrop.png')
 def wrap(text,f,width):
  lines=[]
@@ -48,7 +48,7 @@ for i,s in enumerate(info['scenes']):
  start=0 if i==0 else s['at']+1
  end=info['scenes'][i+1]['at']+1 if i+1<len(info['scenes']) else info['duration']+2
  name=f's{i}';filters.append(f"[{prev}][{i+2}:v]overlay=80:218:enable='between(t,{start:.3f},{end:.3f})'[{name}]");prev=name
-args+=['-filter_complex_threads','2','-filter_complex',';'.join(filters),'-map',f'[{prev}]','-an','-t',str(info['duration']+1),'-r','24','-c:v','libx264','-threads','2','-preset','fast','-crf','23','-pix_fmt','yuv420p','-movflags','+faststart',str(out/'pivot-showcase.mp4')]
+args+=['-filter_complex_threads','2','-filter_complex',';'.join(filters),'-map',f'[{prev}]','-an','-t',str(info['duration']+1),'-r','24','-c:v','libx264','-threads','2','-preset','fast','-crf','23','-pix_fmt','yuv420p','-movflags','+faststart',str(out/'pivot-showcase-portrait.mp4')]
 subprocess.run(args,check=True)
-subprocess.run([ffmpeg,'-hide_banner','-y','-ss','17','-i',str(out/'pivot-showcase.mp4'),'-frames:v','1',str(out/'pivot-showcase.jpg')],check=True)
-subprocess.run([ffmpeg,'-hide_banner','-y','-ss','14','-t','8','-i',str(out/'pivot-showcase.mp4'),'-filter_complex','fps=8,scale=360:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=64[p];[b][p]paletteuse=dither=bayer','-loop','0',str(out/'pivot-preview.gif')],check=True)
+subprocess.run([ffmpeg,'-hide_banner','-y','-ss','17','-i',str(out/'pivot-showcase-portrait.mp4'),'-frames:v','1',str(out/'pivot-showcase-portrait.jpg')],check=True)
+subprocess.run([ffmpeg,'-hide_banner','-y','-ss','14','-t','8','-i',str(out/'pivot-showcase-portrait.mp4'),'-filter_complex','fps=8,scale=360:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=64[p];[b][p]paletteuse=dither=bayer','-loop','0',str(out/'pivot-preview-portrait.gif')],check=True)

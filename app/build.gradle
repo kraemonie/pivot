@@ -3,7 +3,7 @@ android {
  namespace 'dev.pivot.matrix'
  compileSdk 35
  buildFeatures { buildConfig true }
- defaultConfig { applicationId 'dev.pivot.matrix'; minSdk 26; targetSdk 35; versionCode 3; versionName '0.1.2'; testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner' }
+ defaultConfig { applicationId 'dev.pivot.matrix'; minSdk 26; targetSdk 35; versionCode 4; versionName '0.1.3'; testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner' }
  sourceSets { main { assets.srcDirs=[rootProject.file('web')] } }
  compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
 }

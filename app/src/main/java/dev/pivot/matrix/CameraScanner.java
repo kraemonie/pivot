@@ -35,6 +35,13 @@ final class CameraScanner {
   elements.sort(Comparator.comparingInt(e->e.getBoundingBox().centerY()));
   List<List<Text.Element>> rows=new ArrayList<>();List<Text.Element> row=null;float center=0,height=0;int count=0;
   for(Text.Element e:elements){Rect box=e.getBoundingBox();if(row==null||Math.abs(box.centerY()-center)>Math.max(8,Math.min(height,box.height())*.6)){row=new ArrayList<>();rows.add(row);center=box.centerY();height=box.height();count=0;}row.add(e);center=(center*count+box.centerY())/(count+1);height=(height*count+box.height())/(count+1);count++;}
-  StringBuilder out=new StringBuilder();for(List<Text.Element> line:rows){line.sort(Comparator.comparingInt(e->e.getBoundingBox().left));StringBuilder values=new StringBuilder();for(Text.Element e:line){String token=e.getText().replaceAll("[\\[\\]()|]", " ").trim();if(!token.isEmpty()){if(values.length()>0)values.append(' ');values.append(token);}}String value=values.toString().replaceAll("[−–]", "-").replaceAll("-\\s+(?=\\d)","-");if(!value.matches(".*[0-9].*"))continue;if(out.length()>0)out.append('\n');out.append(value);}return out.toString();
+  StringBuilder out=new StringBuilder();for(List<Text.Element> line:rows){line.sort(Comparator.comparingInt(e->e.getBoundingBox().left));StringBuilder values=new StringBuilder();for(Text.Element e:line){String token=e.getText().replaceAll("[\\[\\]()|]", " ").trim();if(!token.isEmpty()){if(values.length()>0)values.append(' ');values.append(token);}}String value=numericRow(values.toString());if(value.isEmpty())continue;if(out.length()>0)out.append('\n');out.append(value);}return out.toString();
  }
+ static String numericRow(String text){
+  String clean=text.replaceAll("[−–]","-").replaceAll("[\\[\\]()|]"," ").replaceAll("^\\s*[A-Za-z]\\s*=\\s*", "").replaceAll("-\\s+(?=\\d)", "-");
+  if(java.util.regex.Pattern.compile("[\\p{L}]").matcher(clean).find())return "";
+  java.util.regex.Matcher matcher=java.util.regex.Pattern.compile("[+-]?(?:\\d+(?:\\.\\d+)?|\\.\\d+)(?:/[+-]?\\d+)?").matcher(clean);
+  StringBuilder out=new StringBuilder();while(matcher.find()){if(out.length()>0)out.append(' ');out.append(matcher.group());}return out.toString();
+ }
+
 }

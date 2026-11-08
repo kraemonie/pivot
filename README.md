@@ -3,9 +3,9 @@ Offline Android Studio app for linear independence and matrix rank. Open this di
 
 ## See Pivot in action
 
-[![Watch the Pivot app walkthrough](docs/demo/pivot-preview.gif)](docs/demo/pivot-showcase.mp4)
+<a href="docs/demo/pivot-showcase-portrait.mp4"><img src="docs/demo/pivot-preview-portrait.gif" width="300" height="533" alt="Pivot app walkthrough in 9:16 portrait"></a>
 
-**[Watch or download the full walkthrough (MP4, 54 seconds)](https://github.com/kraemonie/pivot/raw/refs/heads/main/docs/demo/pivot-showcase.mp4)** · [Download the Android APK](https://github.com/kraemonie/pivot/releases/latest)
+**[Watch or download the full portrait walkthrough (MP4, 54 seconds)](https://github.com/kraemonie/pivot/raw/refs/heads/main/docs/demo/pivot-showcase-portrait.mp4)** · [Download the Android APK](https://github.com/kraemonie/pivot/releases/latest)
 
 Actual Android emulator footage in a mobile 9:16 portrait format, with captions: matrix sizing, rank and independence, row operations, practice feedback, and the learning guide. The animated preview is an excerpt; the full video is silent.
 

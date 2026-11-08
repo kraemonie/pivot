@@ -1,7 +1,7 @@
 (function(){'use strict';const $=id=>document.getElementById(id),M=PivotMath;
 const examples=[[[2,2,-1],[4,0,2],[0,6,-3]],[[1,0,2,1],[0,2,4,2],[0,2,2,1]],[[1,2],[2,4]]];let last=null,step=0,quiz=null,answered=false,questionIndex=0,score={right:0,total:0};
 try{const s=JSON.parse(localStorage.getItem('pivot.score'));if(s&&Number.isInteger(s.right)&&Number.isInteger(s.total)&&s.right>=0&&s.total>=s.right)score=s;}catch(e){}
-function showPage(id){document.querySelectorAll('.page').forEach(p=>p.hidden=p.id!==id);document.querySelectorAll('nav button').forEach(b=>{b.classList.toggle('selected',b.dataset.page===id);if(b.dataset.page===id)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});window.scrollTo(0,0);}
+function showPage(id){if(id==='learn'&&window.replayPivotLearn)window.replayPivotLearn();document.querySelectorAll('.page').forEach(p=>p.hidden=p.id!==id);document.querySelectorAll('nav button').forEach(b=>{b.classList.toggle('selected',b.dataset.page===id);if(b.dataset.page===id)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});window.scrollTo(0,0);}
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>showPage(b.dataset.page));document.querySelector('.brand').onclick=e=>{e.preventDefault();showPage('solve')};
 for(const id of ['rows','cols']){for(let i=1;i<=5;i++){const o=document.createElement('option');o.value=i;o.textContent=i;$(id).appendChild(o);}$(id).value=3;$(id).onchange=()=>grid();}
 let dimensionTarget=null,dimensionFocus=null;
