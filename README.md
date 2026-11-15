@@ -1,4 +1,5 @@
- <div align="center">
+
+<div align="center">
 
 # PIVOT
 
@@ -8,120 +9,142 @@
 
 <p>
   <a href="https://github.com/kraemonie/pivot/releases/latest">
-    <img src="https://img.shields.io/badge/DOWNLOAD-ANDROID%20APK-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Download APK">
+    <img src="https://img.shields.io/badge/Download-Android%20APK-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Download Android APK">
   </a>
   <a href="https://github.com/kraemonie/pivot/blob/main/docs/demo/pivot-showcase-v0.1.5.mp4">
-    <img src="https://img.shields.io/badge/WATCH-APP%20DEMO-FF5252?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Demo">
+    <img src="https://img.shields.io/badge/Watch-App%20Demo-FF5252?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch app demo">
   </a>
 </p>
 
-![Android](https://img.shields.io/badge/Platform-Android-3DDC84?logo=android&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?logo=android&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-17-orange?logo=openjdk&logoColor=white)
-![SDK](https://img.shields.io/badge/Android%20SDK-35-green?logo=android&logoColor=white)
-![Offline](https://img.shields.io/badge/Internet-Not%20Required-blue)
-![Project](https://img.shields.io/badge/Type-Academic%20Project-8B7CF6)
+![Android SDK](https://img.shields.io/badge/Android%20SDK-35-3DDC84?logo=android&logoColor=white)
+![Offline](https://img.shields.io/badge/Works-Offline-3977D5)
+![Project](https://img.shields.io/badge/Project-Linear%20Algebra-8067D8)
 
 </div>
 
 ---
 
-## Overview
+## About Pivot
 
-**Pivot** is an offline Android application developed as a learning tool for the Linear Algebra topics **Linear Independence and Rank of a Matrix**.
+**Pivot** is an offline Android application developed as a learning and problem-solving tool for two fundamental Linear Algebra topics: **Linear Independence** and **Rank of a Matrix**.
 
-It provides students with an interactive environment where they can enter matrices, perform row operations, identify pivot columns, calculate matrix rank, and determine whether a set of vectors is linearly independent or dependent.
+The app allows students to enter matrices, perform row operations, identify pivot columns, calculate matrix rank, and determine whether the columns of a matrix are linearly independent or dependent.
 
-Beyond solving mathematical problems, Pivot encourages learning through step-by-step solutions, interactive lessons, practice quizzes, and camera-assisted matrix input.
+Pivot goes beyond simply displaying answers. It supports learning through step-by-step row reduction, concept lessons, practice quizzes, and camera-assisted matrix input—all in a mobile application that can be used offline.
 
-The application is designed to make abstract Linear Algebra concepts easier to understand through practical interaction and immediate feedback.
+---
 
-## Features
+## See Pivot in Action
 
-| Feature | Description |
-|:---|:---|
-| **Matrix Solver** | Enter and solve matrices with customizable dimensions. |
-| **Linear Independence Checker** | Determine whether matrix columns are linearly independent or dependent. |
-| **Matrix Rank Calculator** | Calculate the rank by identifying pivot positions. |
+<div align="center">
+  <a href="docs/demo/pivot-showcase-v0.1.5.mp4">
+    <img src="docs/demo/pivot-preview-v0.1.5.gif" width="300" height="533" alt="Pivot app demo preview">
+  </a>
+  <p><em>Tap the preview to watch the full app demonstration.</em></p>
+</div>
+
+---
+
+## Features at a Glance
+
+| Feature | What it does |
+| --- | --- |
+| **Matrix Solver** | Enter matrices with dimensions from 1×1 up to 5×5. |
+| **Linear Independence Checker** | Determine whether the columns of a matrix are linearly independent or dependent. |
+| **Matrix Rank Calculator** | Calculate rank by identifying pivot positions after row reduction. |
 | **Step-by-Step Row Reduction** | Follow the elementary row operations used to simplify a matrix. |
 | **Pivot Identification** | Identify pivot columns and understand their role in determining rank. |
-| **Dependence Relation** | Display a nontrivial linear dependence relation when applicable. |
+| **Dependence Relation** | Display a nontrivial linear dependence relation when the columns are dependent. |
 | **Determinant Calculator** | Calculate the determinant of square matrices. |
-| **Practice Quizzes** | Test understanding through randomized questions and instant explanations. |
-| **Learn Module** | Review essential concepts through concise learning materials. |
-| **Matrix Scanner** | Scan printed matrices using the device camera or import an existing image. |
+| **Practice Quizzes** | Answer shuffled questions and receive immediate feedback with explanations. |
+| **Learn Module** | Review the concepts behind matrix rank and linear independence. |
+| **Matrix Scanner** | Capture or import a matrix image and recognize its entries using on-device text recognition. |
 
 ---
 
-## Explore the Application
+## Explore the App
 
-### 01 — Solve
+### 1. Solve
 
-Calculate and analyze matrices through an interactive matrix-solving interface.
+Use the matrix solver to calculate and examine the properties of a matrix.
 
-- Select matrix dimensions from 1×1 up to 5×5.
-- Enter integers, decimals, or fractions.
-- Calculate the exact matrix rank.
-- Determine linear independence or dependence.
-- Identify pivot columns.
-- Display a nontrivial dependence relation when applicable.
+- Choose the matrix dimensions.
+- Enter integer, decimal, or fraction values.
+- Calculate the matrix rank.
+- Check the linear independence or dependence of the columns.
+- View pivot columns and dependence relations.
 - Calculate determinants for square matrices.
-- Review row reduction one step at a time.
+- Follow the row-reduction process step by step.
 
-### 02 — Learn
+### 2. Learn
 
-Understand the mathematical concepts behind the calculations.
+Review the mathematical ideas behind the app's calculations. The learning section introduces the concepts of matrix rank, pivots, linear independence, and linear dependence.
 
-The Learn module provides concise reference materials covering the essential ideas of linear independence and matrix rank.
+### 3. Practice
 
-### 03 — Practice
+Test your understanding through interactive practice questions.
 
-Strengthen mathematical understanding through interactive exercises.
-
-- 36 shuffled practice questions.
-- Questions about matrix rank and linear independence.
-- Immediate feedback after answering.
-- Explanations to help understand correct answers.
+- Shuffled practice questions.
+- Questions covering matrix rank and linear independence.
+- Immediate answer feedback.
+- Explanations that reinforce the correct concepts.
 - Locally saved practice scores.
 
-### 04 — Scan
+### 4. Scan
 
-Enter matrices more conveniently using the phone camera.
+Use the device camera or import an image to help enter a matrix.
 
-- Capture a matrix using the device camera.
-- Import an existing image from the gallery.
-- Recognize text directly on the device using Google ML Kit.
-- Review and correct recognized matrix entries before solving.
+- Capture a printed matrix.
+- Import an existing image.
+- Recognize text on the device using Google ML Kit.
+- Review and correct the recognized entries before solving.
 
-**Note:** Printed integers generally produce the best recognition results. Handwriting, stacked fractions, and complex brackets may require manual corrections.
+> **Scanning tip:** Printed integers generally produce the most reliable results. Handwriting, stacked fractions, and complex brackets may require manual correction.
 
 ---
 
-## Mathematical Foundation
+## The Mathematics Behind Pivot
 
-Pivot is built around two closely related Linear Algebra concepts.
+Pivot connects two important ideas in Linear Algebra: the number of pivot positions in a matrix and the linear independence of its columns.
 
 ### Matrix Rank
 
-The rank of a matrix is the number of pivot positions obtained after reducing the matrix to row echelon form.
+The **rank** of a matrix is the number of pivot positions in its row-echelon form or reduced row-echelon form.
 
 \[
-\operatorname{rank}(A)=\text{Number of pivots}
+\operatorname{rank}(A)=\text{number of pivots}
 \]
 
 ### Linear Independence
 
-A set of vectors is linearly independent if the only solution to their linear combination equaling the zero vector is the trivial solution.
+A set of vectors is **linearly independent** when the equation
 
-For a matrix with \(n\) columns:
+\[
+c_1\mathbf{v}_1+c_2\mathbf{v}_2+\cdots+c_n\mathbf{v}_n=\mathbf{0}
+\]
 
-| Condition | Interpretation |
-|:---|:---|
-| \(\operatorname{rank}(A)=n\) | Linearly Independent |
-| \(\operatorname{rank}(A)<n\) | Linearly Dependent |
+has only the trivial solution:
 
-### Sample Matrix
+\[
+c_1=c_2=\cdots=c_n=0
+\]
 
-Consider the following matrix:
+If a nontrivial solution exists, the vectors are linearly dependent.
+
+### How Rank Determines Independence
+
+For a matrix \(A\) with \(n\) columns:
+
+| Condition | Result |
+| --- | --- |
+| \(\operatorname{rank}(A)=n\) | The columns are linearly independent. |
+| \(\operatorname{rank}(A)<n\) | The columns are linearly dependent. |
+
+### Worked Example
+
+Consider the matrix:
 
 \[
 A=
@@ -131,36 +154,45 @@ A=
 \end{bmatrix}
 \]
 
-After row reduction, the matrix has two pivot positions.
+Its reduced row-echelon form is:
 
-Therefore:
+\[
+\operatorname{RREF}(A)=
+\begin{bmatrix}
+1&0&1\\
+0&1&1
+\end{bmatrix}
+\]
 
-- Matrix rank = 2
-- Number of columns = 3
-- Rank is less than the number of columns.
-- The column vectors are linearly dependent.
+There are two pivot positions, so:
 
-Their dependence relation is:
+\[
+\operatorname{rank}(A)=2
+\]
+
+The matrix has three columns. Since its rank is less than its number of columns, the columns are linearly dependent.
+
+A dependence relation is:
 
 \[
 \mathbf{v}_1+\mathbf{v}_2-\mathbf{v}_3=\mathbf{0}
 \]
 
-This illustrates how matrix rank can be used to determine linear independence.
+This example demonstrates how row reduction and matrix rank can be used to determine linear independence.
 
 ---
 
 ## How to Use Pivot
 
 1. Open the **Solve** section.
-2. Select the desired number of rows and columns.
+2. Select the number of rows and columns.
 3. Enter the matrix values.
-4. Tap the calculate button.
+4. Run the calculation.
 5. Review the matrix rank and independence result.
-6. Explore the identified pivot columns.
+6. Examine the pivot columns and dependence relation, if applicable.
 7. Follow the row operations to understand how the result was obtained.
 
-You can also explore the Learn and Practice sections to reinforce your understanding.
+You can also visit **Learn** to review the concepts or **Practice** to test your understanding.
 
 ---
 
@@ -169,81 +201,74 @@ You can also explore the Learn and Practice sections to reinforce your understan
 | Category | Support |
 |:---|:---|
 | Matrix dimensions | 1×1 to 5×5 |
-| Integer values | Supported |
-| Decimal values | Supported |
-| Fraction values | Supported |
+| Integer entries | Supported |
+| Decimal entries | Supported |
+| Fraction entries | Supported |
 | Determinants | Square matrices |
-| Symbolic expressions | Not supported |
-| Matrix scanning | Printed integers recommended |
+| Symbolic expressions and variables | Not supported |
+| Matrix scanning | Printed integers recommended; manual correction may be needed |
 
-**Calculation accuracy:** Decimal inputs are interpreted as exact fractions. The application checks intermediate integer calculations against JavaScript safe-integer limits. Calculations that exceed these limits display an error rather than returning a potentially rounded result.
+**Calculation note:** Decimal inputs are represented as exact fractions during calculation. Intermediate integer calculations are checked against JavaScript safe-integer limits so the app can report values that exceed its supported exact range instead of silently returning rounded results.
 
 ---
 
 ## Installation
 
-### Download the APK
+### Download the Android APK
 
-The latest available Android APK can be obtained from the project's GitHub Releases page.
+Get the latest available build from the GitHub Releases page:
 
-**[Download Pivot – Latest APK](https://github.com/kraemonie/pivot/releases/latest)**
+**[Download Pivot APK](https://github.com/kraemonie/pivot/releases/latest)**
 
-1. Open the release page.
-2. Download the available APK.
+1. Open the Releases page.
+2. Download the available APK file.
 3. Open the downloaded file on your Android device.
-4. Allow installation from the source if prompted by Android.
-5. Complete the installation and launch Pivot.
+4. If prompted, allow installation from that source in Android settings.
+5. Finish installing and launch Pivot.
 
 ---
 
 ## Build from Source
 
-Want to explore or modify the application?
+Developers who want to inspect or modify the application can build it locally.
 
-### Prerequisites
+### Requirements
 
 - Android Studio
 - Java Development Kit (JDK) 17
 - Android SDK 35
-- Node.js (for running the mathematical tests)
+- Node.js (for the mathematical test suite)
 
 ### Clone the Repository
 
 ```bash
 git clone https://github.com/kraemonie/pivot.git
-```
-
-Navigate to the project directory:
-
-```bash
 cd pivot
 ```
 
-Open the project in Android Studio and synchronize the Gradle files.
+Open the project in Android Studio and allow Gradle to synchronize.
 
-### Run Tests
+### Run the Mathematical Tests
 
 ```bash
 node --test tests/math.test.cjs
 ```
 
-### Build the Android APK
+### Build and Lint the Android App
 
-**Windows:**
+**Windows**
 
-```bash
+```bat
 gradlew.bat assembleDebug lintDebug
 ```
 
-**macOS / Linux:**
+**macOS / Linux**
 
 ```bash
 ./gradlew assembleDebug lintDebug
 ```
 
-### APK Output
-
-After a successful build, the debug APK will be generated at:
+After a successful debug build, the APK is generated at:
 
 ```text
 app/build/outputs/apk/debug/app-debug.apk
@@ -251,62 +276,42 @@ app/build/outputs/apk/debug/app-debug.apk
 
 ---
 
-## Privacy and Offline Functionality
+## Offline Use and Privacy
 
-Pivot is designed to work without requiring an internet connection.
+Pivot is designed to provide its core learning and calculation features without requiring an internet connection.
 
-- No Internet permission is required by the application.
-- No external online services are needed for its core functionality.
-- Matrix scanning uses on-device text recognition.
-- Camera photos are stored in the application's private cache.
-- Practice scores are saved locally.
-
-This allows students to use the application's learning and calculation features without depending on an active internet connection.
+- Matrix calculations run locally.
+- Core learning and practice features are available offline.
+- Matrix text recognition is performed on-device using Google ML Kit.
+- Practice progress is stored locally.
 
 ---
 
-## Design and Accessibility
-
-Pivot features a mobile-focused interface designed to keep mathematical content readable and easy to navigate.
-
-- Montserrat typography for the interface.
-- Space Grotesk typography for matrix numbers.
-- Minimum 12px interface text size.
-- Custom matrix dimension selectors.
-- Animated interface elements.
-- Reduced-motion support.
-
-Both bundled fonts are licensed under the SIL Open Font License (OFL).
-
----
-
-## Technologies and References
+## Technology Stack
 
 | Component | Technology |
 |:---|:---|
-| Mobile Platform | Android |
-| Build System | Gradle |
-| Development Environment | Android Studio |
-| Java Runtime | Java 17 |
+| Mobile platform | Android |
+| Programming language | Java 17 |
+| Build system | Gradle |
+| Development environment | Android Studio |
 | Android SDK | API 35 |
-| Matrix Recognition | Google ML Kit Text Recognition |
-| Mathematical Testing | Node.js Test Runner |
+| Matrix text recognition | Google ML Kit Text Recognition |
+| Mathematical tests | Node.js Test Runner |
 
-**Recognition documentation:** [Google ML Kit – Text Recognition for Android](https://developers.google.com/ml-kit/vision/text-recognition/v2/android)
+**Text recognition reference:** [Google ML Kit – Text Recognition for Android](https://developers.google.com/ml-kit/vision/text-recognition/v2/android)
 
 ---
 
 ## Project Information
 
-**Project Title:** Linear Independence and Rank of a Matrix
-
-**Application Name:** Pivot
-
-**Project Type:** Android Educational Application
-
-**Subject:** Linear Algebra
-
-**Purpose:** To provide an interactive learning and calculation tool that demonstrates the concepts of linear independence, linear dependence, matrix rank, and elementary row operations.
+| Item | Details |
+|:---|:---|
+| Application name | Pivot |
+| Project topic | Linear Independence and Rank of a Matrix |
+| Project type | Android educational application |
+| Subject | Linear Algebra |
+| Primary purpose | To help students explore, calculate, and understand matrix rank and linear independence. |
 
 ---
 
