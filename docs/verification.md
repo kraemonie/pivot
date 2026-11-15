@@ -27,3 +27,12 @@ Vector arrows replace Unicode arrow glyphs. Added native first-launch welcome st
 - Emulator checks passed for operator alignment at 320/360/412px, vertically centered picker, Learn reveal on two separate visits, scan review, quiz and minimum 12px text.
 - New SVG matrix branding and gentle header floating motion; reduced motion remains supported.
 - Portrait showcase uses a new media path and explicitly sized 9:16 README preview.
+
+## 0.1.4
+- Applied the supplied video's purple, lime, pink, cyan and yellow palette, bold typography, outlined controls and solid offset shadows. Existing page structure and all three Learn lessons remain intact.
+- Added matching app branding, adaptive launcher artwork and an Android 13+ monochrome icon. Android system bars follow the active section and welcome screen.
+- Ten existing math and scan-parser tests passed.
+- Browser checks passed for matrix dimensions, scan review, PDF examples, invalid input, row operations, quiz feedback, solution navigation, Learn re-entry and 320/360/412px layouts. Visible text remains at least 12px, and reduced motion remains supported.
+- Reviewed fresh welcome, Solve, Practice, Learn, row-step and desktop screenshots. Verified that the SVG brand image decodes successfully.
+- Android debug assembly and lint passed. All 11 bundled web assets match the final source; adaptive and themed icon resources are present in the APK.
+- Installed the update on the connected Android 15 phone. On-device checks passed for the brand image, section backgrounds, viewport fit, original Learn content, rank 3 and determinant −24 for the PDF square example. Practice score was preserved.

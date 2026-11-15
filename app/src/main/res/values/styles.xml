@@ -1,1 +1,10 @@
-<resources><style name="Theme.Pivot" parent="android:style/Theme.Material.NoActionBar"><item name="android:windowBackground">#121C30</item><item name="android:colorAccent">#D5F875</item><item name="android:statusBarColor">#121C30</item><item name="android:navigationBarColor">#121C30</item><item name="android:windowLightStatusBar">false</item></style></resources>
+<resources>
+ <color name="pivot_icon_background">#7427F5</color>
+ <style name="Theme.Pivot" parent="android:style/Theme.Material.NoActionBar">
+  <item name="android:windowBackground">#D4FF38</item>
+  <item name="android:colorAccent">#7427F5</item>
+  <item name="android:statusBarColor">#D4FF38</item>
+  <item name="android:navigationBarColor">#D4FF38</item>
+  <item name="android:windowLightStatusBar">true</item>
+ </style>
+</resources>
