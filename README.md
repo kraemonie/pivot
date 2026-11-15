@@ -17,7 +17,7 @@ Practice: answer rank and independence questions with immediate explanations. Sc
 `node --test tests/math.test.cjs`
 `gradlew.bat assembleDebug lintDebug`
 
-The APK is generated at app/build/outputs/apk/debug/app-debug.apk. No Internet permission or external services. Reduced motion supported. Decimal inputs are interpreted as exact fractions; expressions with variables are not supported. Font: Space Grotesk (OFL).
+The APK is generated at app/build/outputs/apk/debug/app-debug.apk. No Internet permission or external services. Reduced motion supported. Decimal inputs are interpreted as exact fractions; expressions with variables are not supported. Fonts: Montserrat for the interface and Space Grotesk for matrix numbers (both OFL, bundled for offline use).
 
 Exact arithmetic checks every intermediate integer against JavaScript safe-integer limits. Calculations exceeding those limits show an error instead of a rounded result.
 

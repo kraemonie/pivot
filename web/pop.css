@@ -1,8 +1,8 @@
 /* The video reference's palette, ink outlines, and solid offset shadows. */
 @font-face {
   font-family: Pivot;
-  src: url('fonts/SpaceGrotesk.ttf') format('truetype');
-  font-weight: 300 700;
+  src: url('fonts/Montserrat.ttf') format('truetype');
+  font-weight: 100 900;
   font-display: swap;
 }
 
@@ -20,7 +20,7 @@
   --shadow: 4px 5px 0 var(--ink);
 }
 
-body { background: var(--page-bg); color: var(--ink); }
+body { background: var(--page-bg); color: var(--ink); font-family: Pivot, system-ui, sans-serif; }
 body[data-page='practice'] { --page-bg: #f168bd; }
 body[data-page='learn'] { --page-bg: #3cdbe7; }
 button, input, select, textarea { font: inherit; }
@@ -524,4 +524,15 @@ footer { border-color: #17142b55; color: var(--ink); padding: 23px 0 7px; gap: 1
 @media (prefers-reduced-motion: reduce) {
   *, *:before, *:after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .scroll-reveal { opacity: 1; transform: none; }
+}
+
+/* Heavy geometric lettering follows the supplied video's typography. */
+.hero h1, .welcome h1, .section-top h2, .quiz-header h2, .quiz-card h2,
+#learn > h2, .lesson-grid h3, .callout h3, #emptyResult h2, #verdict,
+header .brand, .welcome-wordmark { font-weight: 900; }
+.matrix-input input, .matrix-output td, .tile, .hero .tile, .welcome-art .tile {
+  font-family: Display, monospace;
+}
+@media (max-width: 380px) {
+  .hero .orbit { display: none; }
 }

@@ -36,3 +36,9 @@ Vector arrows replace Unicode arrow glyphs. Added native first-launch welcome st
 - Reviewed fresh welcome, Solve, Practice, Learn, row-step and desktop screenshots. Verified that the SVG brand image decodes successfully.
 - Android debug assembly and lint passed. All 11 bundled web assets match the final source; adaptive and themed icon resources are present in the APK.
 - Installed the update on the connected Android 15 phone. On-device checks passed for the brand image, section backgrounds, viewport fit, original Learn content, rank 3 and determinant −24 for the PDF square example. Practice score was preserved.
+
+## 0.1.5
+- Bundled open-licensed Montserrat, using weight 900 for the reference video's heavy geometric headings and wordmark. Matrix numbers keep Space Grotesk.
+- Repeated browser checks passed at 320/360/412px with minimum 12px text, quiz and scan feedback, row steps, Learn replay and solution navigation. Captured the actual rank-3 result, row steps, successful independence quiz and original Learn lesson for the launch video.
+- Android debug build and lint passed with the new font; the final APK includes 13 web assets.
+- Installed versionCode 6 / v0.1.5 on the phone and repeated the icon, theme, lesson, calculator, viewport and score-preservation smoke checks successfully.
