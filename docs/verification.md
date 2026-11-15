@@ -42,3 +42,4 @@ Vector arrows replace Unicode arrow glyphs. Added native first-launch welcome st
 - Repeated browser checks passed at 320/360/412px with minimum 12px text, quiz and scan feedback, row steps, Learn replay and solution navigation. Captured the actual rank-3 result, row steps, successful independence quiz and original Learn lesson for the launch video.
 - Android debug build and lint passed with the new font; the final APK includes 13 web assets.
 - Installed versionCode 6 / v0.1.5 on the phone and repeated the icon, theme, lesson, calculator, viewport and score-preservation smoke checks successfully.
+- Created a 22-second vertical Hyperframes showcase from the updated app screens. The composition check passed with 24/24 contrast checks and zero errors. Decoded final frames and the poster were inspected; poster insertion preserved all 660 frames, audio and duration. The README now references the new versioned MP4 and GIF.

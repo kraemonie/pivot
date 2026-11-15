@@ -3,11 +3,11 @@ Offline Android Studio app for linear independence and matrix rank. Open this di
 
 ## See Pivot in action
 
-<a href="docs/demo/pivot-showcase-portrait.mp4"><img src="docs/demo/pivot-preview-portrait.gif" width="300" height="533" alt="Pivot app walkthrough in 9:16 portrait"></a>
+<a href="docs/demo/pivot-showcase-v0.1.5.mp4"><img src="docs/demo/pivot-preview-v0.1.5.gif" width="300" height="533" alt="Pivot 0.1.5 showcase with the new colorful UI, bold typography and app icon"></a>
 
-**[Watch or download the full portrait walkthrough (MP4, 54 seconds)](https://github.com/kraemonie/pivot/raw/refs/heads/main/docs/demo/pivot-showcase-portrait.mp4)** · [Download the Android APK](https://github.com/kraemonie/pivot/releases/latest)
+**[Watch or download the new showcase (MP4, 22 seconds)](https://github.com/kraemonie/pivot/raw/refs/heads/main/docs/demo/pivot-showcase-v0.1.5.mp4)** · [Download the latest Android APK](https://github.com/kraemonie/pivot/releases/latest)
 
-Actual Android emulator footage in a mobile 9:16 portrait format, with captions: matrix sizing, rank and independence, row operations, practice feedback, and the learning guide. The animated preview is an excerpt; the full video is silent.
+The updated v0.1.5 interface in 9:16 portrait: matrix entry, exact rank and independence, row operations, practice feedback and the original Learn lessons. Made from actual app screens, with music and motion. [Video details and credits](docs/demo/README.md).
 
 ## Use
 Solve: select 1-5 rows and columns, enter numbers or fractions, and calculate. Each column is one vector. Results include exact rank, determinant for square matrices, pivot columns and a nontrivial dependence relation. Step through row reduction.
