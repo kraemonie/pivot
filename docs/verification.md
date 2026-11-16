@@ -43,3 +43,12 @@ Vector arrows replace Unicode arrow glyphs. Added native first-launch welcome st
 - Android debug build and lint passed with the new font; the final APK includes 13 web assets.
 - Installed versionCode 6 / v0.1.5 on the phone and repeated the icon, theme, lesson, calculator, viewport and score-preservation smoke checks successfully.
 - Created a 22-second vertical Hyperframes showcase from the updated app screens. The composition check passed with 24/24 contrast checks and zero errors. Decoded final frames and the poster were inspected; poster insertion preserved all 660 frames, audio and duration. The README now references the new versioned MP4 and GIF.
+
+## 0.1.6
+- Added a native crop/rotation screen for camera captures and imported photos, with a handwriting option and a cropped-photo preview during review.
+- Added connected-component bracket filtering and two-pass printed OCR. Regression checks confirm brackets are removed while genuine digits `1` are preserved.
+- Bundled a small offline handwritten-digit model. It scored 98.07% on the separate 10,000-image MNIST test set; this measures isolated digits, not complete photographed matrices. Uncertain readings remain `?` for correction.
+- Seven native tests passed on Android 9: crop dragging/reset, printed OCR, numeric filtering, bracket removal, preservation of real ones, model serialization/predictions and an actual handwritten-digit matrix fixture.
+- Eleven math/parser tests and the browser checks at 320/360/412px passed. Android debug assembly, test assembly and lint passed.
+- Installed versionCode 7 / v0.1.6 on the connected Android 15 phone. Its system rejected the separate instrumentation APK, so native regression tests ran on the emulator.
+- Removed the reference paragraph at the bottom of Learn, refreshed the GitHub README layout, and updated the repository description/topics.

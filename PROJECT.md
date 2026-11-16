@@ -1,6 +1,6 @@
 # Linear Independence and Rank of a Matrix
 
-New independent Android app project. Initial Android app implemented and tested.
+Pivot is an offline Android app for matrix rank and linear independence, with exact arithmetic, row-operation explanations, practice quizzes and learning notes.
 
 ## Requested features
 - Enter vectors or a matrix and determine linear dependence or independence.
@@ -11,8 +11,8 @@ New independent Android app project. Initial Android app implemented and tested.
 ## Reference
 Use references/Linear-Independent-Rank-of-A-Matrix-Basis-and-Dimension-1.pdf, focusing on linear independence and rank (pages 1-3).
 
-## Pending decisions
-The name Pivot was suggested, but has not been confirmed. Initial version supports numbers, decimals and fractions; symbolic equations are outside this version.
+## Current version
+Version 0.1.6 adds photo cropping and rotation, bracket filtering, two-pass printed OCR, a bundled handwritten-digit reader and photo comparison during scan review. Recognition remains editable; uncertain handwriting is marked `?`. Numeric matrices up to 5 × 5 are supported. Symbolic equations are outside this version.
 
 ## Status
-User selected this folder and authorized Android Studio implementation.
+The latest APK is built and installed on the connected phone. Source, README updates and release APKs are maintained at https://github.com/kraemonie/pivot.

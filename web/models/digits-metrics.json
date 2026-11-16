@@ -1,0 +1,15 @@
+{
+  "dataset": "MNIST",
+  "seed": 741,
+  "validation_count": 5000,
+  "validation_accuracy": 0.9828,
+  "test_count": 10000,
+  "test_accuracy": 0.9807,
+  "layers": [
+    784,
+    128,
+    64,
+    10
+  ],
+  "scope": "Isolated handwritten digits; this is not photographed-matrix accuracy."
+}

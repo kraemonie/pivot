@@ -29,7 +29,7 @@ const { spawn } = require('node:child_process');
     await page.setViewport({ width:412,height:915,deviceScaleFactor:2,isMobile:true });
     await page.goto('http://127.0.0.1:8137/assets/index.html');
     await page.evaluate(() => document.fonts.ready);
-    await page.waitForFunction(() => Array.from(document.images).every(img => img.complete && img.naturalWidth > 0));
+    await page.waitForFunction(() => Array.from(document.images).filter(img => img.hasAttribute('src')).every(img => img.complete && img.naturalWidth > 0));
     await new Promise(resolve => setTimeout(resolve, 500));
     await page.screenshot({path:path.join(output,'welcome.png')});
     if (await page.$eval('#welcome', el => !el.hidden)) await page.click('#beginPivot');

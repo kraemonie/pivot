@@ -1,6 +1,8 @@
 
 <div align="center">
 
+<img src="web/icon.svg" width="90" height="90" alt="Pivot app icon">
+
 # PIVOT
 
 ### Understand the Pivots. Discover the Rank. Test Independence.
@@ -43,6 +45,7 @@ Pivot goes beyond simply displaying answers. It supports learning through step-b
     <img src="docs/demo/pivot-preview-v0.1.5.gif" width="300" height="533" alt="Pivot app demo preview">
   </a>
   <p><em>Tap the preview to watch the full app demonstration.</em></p>
+  <p><a href="docs/demo/README.md">Video details and music credits</a></p>
 </div>
 
 ---
@@ -96,12 +99,14 @@ Test your understanding through interactive practice questions.
 
 Use the device camera or import an image to help enter a matrix.
 
-- Capture a printed matrix.
-- Import an existing image.
-- Recognize text on the device using Google ML Kit.
-- Review and correct the recognized entries before solving.
+- Capture a matrix or import an existing image.
+- Crop around the matrix and rotate the photo before reading it.
+- Enable **Handwritten numbers** for clear, separated handwritten digits.
+- Filter matrix brackets using their image geometry, preserving genuine digits `1`.
+- Compare two processing passes for printed text, or use the bundled offline handwriting model.
+- Review the entries beside the cropped photo; uncertain handwritten digits are marked `?`.
 
-> **Scanning tip:** Printed integers generally produce the most reliable results. Handwriting, stacked fractions, and complex brackets may require manual correction.
+> **Scanning tip:** Review every scan before computing. Joined digits, unusual handwriting and fractions may still need correction. The handwriting benchmark is for isolated MNIST digits, not complete photographed matrices. [Model details and credits](web/models/README.md).
 
 ---
 
@@ -113,70 +118,70 @@ Pivot connects two important ideas in Linear Algebra: the number of pivot positi
 
 The **rank** of a matrix is the number of pivot positions in its row-echelon form or reduced row-echelon form.
 
-\[
+$$
 \operatorname{rank}(A)=\text{number of pivots}
-\]
+$$
 
 ### Linear Independence
 
 A set of vectors is **linearly independent** when the equation
 
-\[
+$$
 c_1\mathbf{v}_1+c_2\mathbf{v}_2+\cdots+c_n\mathbf{v}_n=\mathbf{0}
-\]
+$$
 
 has only the trivial solution:
 
-\[
+$$
 c_1=c_2=\cdots=c_n=0
-\]
+$$
 
 If a nontrivial solution exists, the vectors are linearly dependent.
 
 ### How Rank Determines Independence
 
-For a matrix \(A\) with \(n\) columns:
+For a matrix $A$ with $n$ columns:
 
 | Condition | Result |
 | --- | --- |
-| \(\operatorname{rank}(A)=n\) | The columns are linearly independent. |
-| \(\operatorname{rank}(A)<n\) | The columns are linearly dependent. |
+| $\operatorname{rank}(A)=n$ | The columns are linearly independent. |
+| $\operatorname{rank}(A)<n$ | The columns are linearly dependent. |
 
 ### Worked Example
 
 Consider the matrix:
 
-\[
+$$
 A=
 \begin{bmatrix}
 1&0&1\\
 0&1&1
 \end{bmatrix}
-\]
+$$
 
 Its reduced row-echelon form is:
 
-\[
+$$
 \operatorname{RREF}(A)=
 \begin{bmatrix}
 1&0&1\\
 0&1&1
 \end{bmatrix}
-\]
+$$
 
 There are two pivot positions, so:
 
-\[
+$$
 \operatorname{rank}(A)=2
-\]
+$$
 
 The matrix has three columns. Since its rank is less than its number of columns, the columns are linearly dependent.
 
 A dependence relation is:
 
-\[
+$$
 \mathbf{v}_1+\mathbf{v}_2-\mathbf{v}_3=\mathbf{0}
-\]
+$$
 
 This example demonstrates how row reduction and matrix rank can be used to determine linear independence.
 
@@ -206,7 +211,7 @@ You can also visit **Learn** to review the concepts or **Practice** to test your
 | Fraction entries | Supported |
 | Determinants | Square matrices |
 | Symbolic expressions and variables | Not supported |
-| Matrix scanning | Printed integers recommended; manual correction may be needed |
+| Matrix scanning | Printed or handwritten digits; crop and review before computing |
 
 **Calculation note:** Decimal inputs are represented as exact fractions during calculation. Intermediate integer calculations are checked against JavaScript safe-integer limits so the app can report values that exceed its supported exact range instead of silently returning rounded results.
 
@@ -251,7 +256,7 @@ Open the project in Android Studio and allow Gradle to synchronize.
 ### Run the Mathematical Tests
 
 ```bash
-node --test tests/math.test.cjs
+node --test tests/math.test.cjs tests/scan.test.cjs tests/exhaustive.test.cjs
 ```
 
 ### Build and Lint the Android App
@@ -282,7 +287,8 @@ Pivot is designed to provide its core learning and calculation features without 
 
 - Matrix calculations run locally.
 - Core learning and practice features are available offline.
-- Matrix text recognition is performed on-device using Google ML Kit.
+- Printed recognition and the bundled handwriting model both run on-device.
+- No scan photos are uploaded to an external recognition service.
 - Practice progress is stored locally.
 
 ---
@@ -296,10 +302,17 @@ Pivot is designed to provide its core learning and calculation features without 
 | Build system | Gradle |
 | Development environment | Android Studio |
 | Android SDK | API 35 |
-| Matrix text recognition | Google ML Kit Text Recognition |
+| Printed text recognition | Google ML Kit Text Recognition |
+| Handwritten digits | Bundled offline digit model |
 | Mathematical tests | Node.js Test Runner |
 
 **Text recognition reference:** [Google ML Kit – Text Recognition for Android](https://developers.google.com/ml-kit/vision/text-recognition/v2/android)
+
+---
+
+## Typography and Model Credits
+
+Montserrat and Space Grotesk are bundled under the SIL Open Font License; licenses are in `web/fonts/`. The handwriting model and its MNIST provenance, benchmark scope and CC BY-SA 3.0 attribution are documented in [web/models](web/models/README.md).
 
 ---
 
