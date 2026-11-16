@@ -119,7 +119,7 @@ Pivot connects two important ideas in Linear Algebra: the number of pivot positi
 The **rank** of a matrix is the number of pivot positions in its row-echelon form or reduced row-echelon form.
 
 $$
-\operatorname{rank}(A)=\text{number of pivots}
+\text{rank}(A)=\text{number of pivots}
 $$
 
 ### Linear Independence
@@ -144,8 +144,8 @@ For a matrix $A$ with $n$ columns:
 
 | Condition | Result |
 | --- | --- |
-| $\operatorname{rank}(A)=n$ | The columns are linearly independent. |
-| $\operatorname{rank}(A)<n$ | The columns are linearly dependent. |
+| $\text{rank}(A)=n$ | The columns are linearly independent. |
+| $\text{rank}(A)<n$ | The columns are linearly dependent. |
 
 ### Worked Example
 
@@ -162,7 +162,7 @@ $$
 Its reduced row-echelon form is:
 
 $$
-\operatorname{RREF}(A)=
+\text{RREF}(A)=
 \begin{bmatrix}
 1&0&1\\
 0&1&1
@@ -172,7 +172,7 @@ $$
 There are two pivot positions, so:
 
 $$
-\operatorname{rank}(A)=2
+\text{rank}(A)=2
 $$
 
 The matrix has three columns. Since its rank is less than its number of columns, the columns are linearly dependent.
